@@ -147,6 +147,45 @@
     font-family:var(--mono);font-size:11px;color:var(--text-faint);border:1px solid var(--border);
     border-radius:5px;padding:4px 9px;
   }
+  .case-link{
+    display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12.5px;color:var(--teal);
+    text-decoration:none;
+  }
+  .case-link:hover{text-decoration:underline;}
+
+  /* TESTIMONIAL */
+  .testimonial-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:36px 38px;position:relative;
+  }
+  .testimonial-card::before{
+    content:'"';position:absolute;top:14px;left:26px;font-family:var(--display);font-size:64px;
+    color:var(--amber);opacity:.25;line-height:1;
+  }
+  .testimonial-quote{
+    font-family:var(--display);font-size:19px;font-weight:500;color:var(--text);
+    line-height:1.5;margin:8px 0 22px;position:relative;z-index:1;max-width:680px;
+  }
+  .testimonial-attr{display:flex;align-items:center;gap:12px;}
+  .testimonial-avatar{
+    width:38px;height:38px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--border-strong);
+    display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;
+    font-size:14px;color:var(--teal);flex-shrink:0;
+  }
+  .testimonial-name{font-weight:600;font-size:14px;color:var(--text);}
+  .testimonial-role{font-family:var(--mono);font-size:12px;color:var(--text-faint);}
+  .testimonial-toggle{
+    margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--teal);cursor:pointer;
+    display:inline-block;user-select:none;
+  }
+  .testimonial-toggle:hover{text-decoration:underline;}
+  .testimonial-full{
+    display:none;margin-top:20px;padding-top:20px;border-top:1px solid var(--border);
+    color:var(--text-dim);font-size:14px;line-height:1.7;
+  }
+  .testimonial-full.open{display:block;}
+  .testimonial-full p{margin:0 0 14px;color:var(--text-dim);font-size:14px;}
+  .testimonial-full p:last-child{margin-bottom:0;}
 
   /* TECH GRID */
   .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;}
@@ -220,7 +259,9 @@
     <div class="site-links">
       <a href="#career">Career</a>
       <a href="#projects">Projects</a>
+      <a href="#testimonial">Testimonial</a>
       <a href="#insights">Insights</a>
+      <a href="resume.html">Résumé</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -295,6 +336,7 @@
         <span class="stack-pill">multi-strategy routing</span>
         <span class="stack-pill">FAA / BTS data</span>
       </div>
+      <a href="flightiq.html" class="case-link">Read full case study →</a>
     </div>
     <div class="project-card">
       <div class="project-tag">Independent — AI-native pipeline</div>
@@ -305,6 +347,7 @@
         <span class="stack-pill">LLM extraction</span>
         <span class="stack-pill">cost-aware inference</span>
       </div>
+      <a href="rate-ingestion.html" class="case-link">Read full case study →</a>
     </div>
     <div class="project-card">
       <div class="project-tag">Independent — simulation &amp; ops research</div>
@@ -315,14 +358,41 @@
         <span class="stack-pill">queueing &amp; assignment heuristics</span>
         <span class="stack-pill">AI-assisted scenario generation</span>
       </div>
-      <a href="#insights" style="margin-top:14px;font-family:var(--mono);font-size:12.5px;color:var(--teal);text-decoration:none;">↓ try the live queueing model</a>
+      <a href="truck-dock.html" class="case-link">Read full case study →</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="testimonial">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">Testimonial</h2>
+  </div>
+
+  <div class="testimonial-card">
+    <p class="testimonial-quote">"Latha is the kind of engineer that every product owner hopes for: insightful, proactive, pragmatic, and deeply invested in building the right solution within the ever-present time constraints. She was a trusted thought partner whose perspective made our product and our team stronger."</p>
+    <div class="testimonial-attr">
+      <div class="testimonial-avatar">MB</div>
+      <div>
+        <div class="testimonial-name">Meghan Barni</div>
+        <div class="testimonial-role">Former Product Manager, CargoSphere (dba WiseTech Global)</div>
+      </div>
+    </div>
+    <span class="testimonial-toggle" onclick="document.getElementById('fullLetter').classList.toggle('open'); this.textContent = document.getElementById('fullLetter').classList.contains('open') ? '↑ Hide full letter' : '↓ Read full letter'">↓ Read full letter</span>
+    <div class="testimonial-full" id="fullLetter">
+      <p>I am delighted to write this letter of reference for Ponnilatha Thangaraja (Latha). I had the privilege of working closely with Latha for about 6 years while I was a Product Manager at CargoSphere dba WiseTech Global. During that time I was consistently impressed by her technical expertise, leadership, and professionalism.</p>
+      <p>Latha is an incredibly talented software engineer. She has an impressive ability to combine deep technical knowledge with sound judgement and strong leadership skills. She delivers comprehensive, high-quality solutions to complex problems while keeping the end user and the broader business objectives in mind. She is someone I trusted completely to tackle our most difficult problems.</p>
+      <p>Beyond her technical abilities, Latha is an outstanding team leader. People naturally look to her for guidance, not just because of her title, but because of her expertise, kindness, dependability, and willingness to mentor. She directs her team with respect and confidence and keeps them focused on the right things at the right times to deliver results.</p>
+      <p>As a Product Manager, I valued our partnership tremendously. Latha is the kind of engineer that every product owner hopes for: insightful, proactive, pragmatic, and deeply invested in building the right solution within the ever-present time constraints. She was a trusted thought partner whose perspective made our product and our team stronger.</p>
+      <p>I would enthusiastically welcome an opportunity to work with Latha again and recommend her without hesitation. Any organization would be fortunate to have her, and I am confident she will make a meaningful impact wherever she goes next.</p>
+      <p>— Meghan Barni, Former Product Manager, CargoSphere</p>
     </div>
   </div>
 </section>
 
 <section class="wrap" id="insights">
   <div class="sec-head">
-    <span class="sec-num">04</span>
+    <span class="sec-num">05</span>
     <h2 class="sec-title">Project insights — truck &amp; dock simulation</h2>
     <span class="sec-sub">live model</span>
   </div>
@@ -349,7 +419,7 @@
 
 <section class="wrap" id="tech">
   <div class="sec-head">
-    <span class="sec-num">05</span>
+    <span class="sec-num">06</span>
     <h2 class="sec-title">Technology expertise</h2>
   </div>
   <div class="tech-grid">
@@ -382,7 +452,7 @@
 
 <footer class="wrap" id="contact">
   <div class="sec-head" style="margin-bottom:24px;">
-    <span class="sec-num">06</span>
+    <span class="sec-num">07</span>
     <h2 class="sec-title">Education</h2>
   </div>
   <div class="edu-item">
@@ -397,7 +467,7 @@
     <div class="edu-degree">Bachelor of Engineering — Computer Science</div>
     <div class="edu-school">Anna University, India</div>
   </div>
-  <div class="footer-note">ponnilatha@gmail.com · 972-951-8153 · linkedin.com/in/ponnilatha · us.theminilatha.com</div>
+  <div class="footer-note">ponnilatha@gmail.com · 972-951-8153 · linkedin.com/in/ponnilatha · us.theminilatha.com · <a href="resume.html" style="color:var(--teal);">Printable résumé →</a></div>
 </footer>
 
 <script>
