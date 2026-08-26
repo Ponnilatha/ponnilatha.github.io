@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlightIQ — Case Study | Ponnilatha Ponnaiah Thangaraja</title>
+<meta name="description" content="FlightIQ — an AI-powered flight congestion intelligence dashboard that optimizes for outcome, not just price. Independent project by Ponnilatha Ponnaiah Thangaraja.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#12161C; --bg-alt:#161B22; --surface:#1A2129;
+    --border:#2A323C; --border-strong:#3A4552;
+    --text:#EDEEF0; --text-dim:#8B96A5; --text-faint:#5B6472;
+    --amber:#FFB020; --teal:#45D9C6;
+    --mono:'IBM Plex Mono',monospace; --sans:'Inter',sans-serif; --display:'Space Grotesk',sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:var(--teal);}
+  .wrap{max-width:820px;margin:0 auto;padding:0 32px;}
+  .site-nav{position:sticky;top:0;z-index:10;background:rgba(18,22,28,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+  .site-nav-inner{max-width:1040px;margin:0 auto;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;}
+  .site-brand{font-family:var(--display);font-weight:600;font-size:15px;color:var(--text);text-decoration:none;}
+  .site-brand span{color:var(--amber);}
+  .back-link{font-family:var(--mono);font-size:12.5px;color:var(--text-dim);text-decoration:none;}
+  .back-link:hover{color:var(--teal);}
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--border);}
+  .project-tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;}
+  h1{font-family:var(--display);font-weight:600;font-size:clamp(28px,4vw,42px);margin:0 0 14px;letter-spacing:-0.01em;}
+  .thesis{color:var(--text-dim);font-size:16px;max-width:680px;margin:0;}
+  section{padding:44px 0;border-bottom:1px solid var(--border);}
+  section:last-of-type{border-bottom:none;}
+  h2{font-family:var(--display);font-weight:600;font-size:20px;margin:0 0 16px;color:var(--text);}
+  p{color:var(--text-dim);font-size:15.5px;margin:0 0 14px;}
+  .stack-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+  .stack-pill{font-family:var(--mono);font-size:11.5px;color:var(--text-faint);border:1px solid var(--border);border-radius:5px;padding:5px 10px;}
+  .signal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+  .signal-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 22px;}
+  .signal-card .num{font-family:var(--display);font-size:13px;color:var(--amber);margin-bottom:8px;}
+  .signal-card h3{font-family:var(--display);font-size:16px;margin:0 0 8px;color:var(--text);}
+  .signal-card p{font-size:14px;margin:0;}
+  ul.insight-list{margin:0;padding-left:20px;color:var(--text-dim);}
+  ul.insight-list li{margin-bottom:12px;}
+  ul.insight-list li::marker{color:var(--teal);}
+  footer{padding:40px 0 64px;color:var(--text-faint);font-family:var(--mono);font-size:12.5px;}
+  @media (max-width:600px){.wrap{padding:0 20px;}.site-nav-inner{padding:0 20px;}}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="site-brand">theminilatha<span>.</span></a>
+    <a href="index.html#projects" class="back-link">← Back to portfolio</a>
+  </div>
+</nav>
+
+<div class="wrap hero">
+  <div class="project-tag">Independent — decision intelligence</div>
+  <h1>FlightIQ</h1>
+  <p class="thesis">An AI-powered flight congestion intelligence dashboard built on a simple premise: most people optimize for price, but strategic thinkers optimize for outcome.</p>
+</div>
+
+<section class="wrap">
+  <h2>The idea</h2>
+  <p>Every traveler who books the cheapest flight without checking congestion patterns is making a reactive choice — optimizing one variable and absorbing the cost elsewhere: delays, stress, missed connections. FlightIQ reframes the decision around outcome rather than price alone, surfacing the signals that actually predict a smooth trip.</p>
+  <p>On the surface it's a dashboard. Underneath, it's an exercise in reading the environment before committing — the same instinct that separates reactive decisions from strategic ones.</p>
+</section>
+
+<section class="wrap">
+  <h2>What it surfaces</h2>
+  <div class="signal-grid">
+    <div class="signal-card">
+      <div class="num">01</div>
+      <h3>Ground stop programs</h3>
+      <p>Live FAA ground-stop data — the signal that changes a decision but rarely shows up in a normal flight search.</p>
+    </div>
+    <div class="signal-card">
+      <div class="num">02</div>
+      <h3>Airport congestion scores</h3>
+      <p>A composite view of how congested an airport is likely to be, beyond just on-time percentages.</p>
+    </div>
+    <div class="signal-card">
+      <div class="num">03</div>
+      <h3>7-day forecasts</h3>
+      <p>Forward-looking congestion trends so a decision can be made ahead of the travel date, not the morning of.</p>
+    </div>
+    <div class="signal-card">
+      <div class="num">04</div>
+      <h3>Best departure windows</h3>
+      <p>The three best windows to fly, ranked by total travel time rather than fare alone.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>How it's built</h2>
+  <ul class="insight-list">
+    <li>NetworkX-based graph optimization runs three independent strategies — cost, time, and congestion — because the "fastest" route and the "best" route are almost never the same thing.</li>
+    <li>Single-metric thinking (cheapest fare, shortest duration) consistently misses options that multi-strategy optimization surfaces.</li>
+    <li>Resilience is designed into the architecture, not bolted on: when live APIs are unavailable, the system falls back to BTS statistical models, and historical patterns fill gaps in real-time congestion data.</li>
+  </ul>
+  <div class="stack-row">
+    <span class="stack-pill">NetworkX graph optimization</span>
+    <span class="stack-pill">multi-strategy routing (cost / time / congestion)</span>
+    <span class="stack-pill">FAA ground-stop data</span>
+    <span class="stack-pill">BTS statistical fallback models</span>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>The bigger takeaway</h2>
+  <p>Every domain has a congestion problem — bottlenecks that aren't visible from the surface, windows of opportunity that close fast, and paths that look obvious but cost more than expected. Building FlightIQ was as much a lesson in strategic thinking as it was a technical project: the leaders and systems that consistently outperform aren't luckier, they've built better instruments for reading the environment.</p>
+</section>
+
+<footer class="wrap">ponnilatha@gmail.com · <a href="index.html">us.theminilatha.com portfolio</a></footer>
+
+</body>
+</html>
