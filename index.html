@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ponnilatha Ponnaiah Thangaraja — Principal Software Architect</title>
+<meta name="description" content="Ponnilatha Ponnaiah Thangaraja — Principal Software Architect. 16+ years building distributed systems, event-driven platforms, and microservice architecture across Equifax, GE, CargoSphere, and WiseTech Global, plus independent AI-native and simulation projects.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#12161C;
+    --bg-alt:#161B22;
+    --surface:#1A2129;
+    --surface-2:#20293380;
+    --border:#2A323C;
+    --border-strong:#3A4552;
+    --text:#EDEEF0;
+    --text-dim:#8B96A5;
+    --text-faint:#5B6472;
+    --amber:#FFB020;
+    --amber-dim:#8A5E17;
+    --teal:#45D9C6;
+    --teal-dim:#1F5F58;
+    --mono:'IBM Plex Mono',monospace;
+    --sans:'Inter',sans-serif;
+    --display:'Space Grotesk',sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal);}
+  ::selection{background:var(--amber);color:#1a1408;}
+
+  .wrap{max-width:1040px;margin:0 auto;padding:0 32px;}
+
+  /* HERO */
+  .hero{padding:96px 0 56px;border-bottom:1px solid var(--border);}
+  .eyebrow{
+    font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px rgba(69,217,198,.15);animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+  h1{
+    font-family:var(--display);font-weight:600;font-size:clamp(34px,5vw,54px);
+    margin:0 0 10px;letter-spacing:-0.01em;
+  }
+  .role{
+    font-family:var(--display);font-weight:500;font-size:clamp(17px,2vw,21px);
+    color:var(--amber);margin:0 0 20px;
+  }
+  .thesis{max-width:640px;color:var(--text-dim);font-size:16px;margin:0 0 30px;}
+  .contact-row{display:flex;flex-wrap:wrap;gap:8px 0;font-family:var(--mono);font-size:13px;color:var(--text-faint);}
+  .contact-row span{padding:0 14px;border-right:1px solid var(--border);}
+  .contact-row span:first-child{padding-left:0;}
+  .contact-row span:last-child{border-right:none;}
+  .contact-row a{color:var(--text-dim);text-decoration:none;}
+  .contact-row a:hover{color:var(--teal);}
+
+  .status-console{
+    margin-top:32px;background:var(--bg-alt);border:1px solid var(--border);border-radius:8px;
+    padding:14px 18px;font-family:var(--mono);font-size:12.5px;color:var(--text-dim);
+    display:flex;flex-wrap:wrap;gap:6px 22px;
+  }
+  .status-console b{color:var(--text);font-weight:500;}
+
+  /* SECTION HEADERS */
+  section{padding:64px 0;border-bottom:1px solid var(--border);}
+  section:last-of-type{border-bottom:none;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:36px;}
+  .sec-num{font-family:var(--mono);font-size:13px;color:var(--amber);}
+  .sec-title{font-family:var(--display);font-weight:600;font-size:22px;margin:0;}
+  .sec-sub{color:var(--text-faint);font-size:14px;margin-left:auto;font-family:var(--mono);}
+
+  /* PIPELINE / CAREER TIMELINE */
+  .pipeline-track{position:relative;padding:34px 0 8px;overflow-x:auto;}
+  .pipeline-line{
+    position:absolute;top:56px;left:0;right:0;height:2px;background:var(--border-strong);
+    overflow:hidden;
+  }
+  .pipeline-line::after{
+    content:'';position:absolute;top:0;left:-30%;width:30%;height:100%;
+    background:linear-gradient(90deg,transparent,var(--teal),transparent);
+    animation:flow 3.4s linear infinite;
+  }
+  @media (prefers-reduced-motion:reduce){.pipeline-line::after{animation:none;}.eyebrow .dot{animation:none;}}
+  @keyframes flow{0%{left:-30%;}100%{left:100%;}}
+  .nodes{position:relative;display:flex;gap:6px;min-width:820px;}
+  .node{
+    flex:1;text-align:center;cursor:pointer;background:none;border:none;color:inherit;font-family:inherit;
+    padding:0;position:relative;
+  }
+  .node-dot{
+    width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--border-strong);
+    margin:0 auto 12px;position:relative;top:50px;transition:.2s;
+  }
+  .node.active .node-dot{border-color:var(--amber);background:var(--amber);box-shadow:0 0 0 4px rgba(255,176,32,.18);}
+  .node:hover .node-dot{border-color:var(--teal);}
+  .node-label{
+    margin-top:66px;font-size:13px;font-weight:500;color:var(--text-dim);line-height:1.35;
+  }
+  .node.active .node-label{color:var(--text);}
+  .node-years{display:block;font-family:var(--mono);font-size:11px;color:var(--text-faint);margin-top:4px;}
+
+  .detail-panel{
+    margin-top:40px;background:var(--surface);border:1px solid var(--border);border-radius:10px;
+    padding:28px 30px;
+  }
+  .detail-title{font-family:var(--display);font-size:18px;font-weight:600;margin:0 0 3px;}
+  .detail-org{color:var(--amber);font-family:var(--mono);font-size:13px;margin:0 0 18px;}
+  .detail-panel ul{margin:0;padding-left:20px;color:var(--text-dim);font-size:14.5px;}
+  .detail-panel li{margin-bottom:9px;}
+  .detail-panel li::marker{color:var(--teal);}
+
+  /* COMPETENCY CHIPS */
+  .chip-grid{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{
+    font-family:var(--mono);font-size:12.5px;color:var(--text-dim);background:var(--bg-alt);
+    border:1px solid var(--border);border-radius:20px;padding:8px 16px;
+  }
+
+  /* PROJECT CARDS */
+  .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+  @media (max-width:760px){.project-grid{grid-template-columns:1fr;}.nodes{min-width:640px;}}
+  .project-card{
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:26px 26px 24px;
+    display:flex;flex-direction:column;
+  }
+  .project-tag{
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);
+    margin-bottom:12px;
+  }
+  .project-name{font-family:var(--display);font-size:19px;font-weight:600;margin:0 0 10px;}
+  .project-desc{color:var(--text-dim);font-size:14.5px;margin:0 0 18px;flex:1;}
+  .project-stack{display:flex;flex-wrap:wrap;gap:7px;}
+  .stack-pill{
+    font-family:var(--mono);font-size:11px;color:var(--text-faint);border:1px solid var(--border);
+    border-radius:5px;padding:4px 9px;
+  }
+
+  /* TECH GRID */
+  .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;}
+  .tech-cat{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin:0 0 10px;}
+  .tech-list{color:var(--text-dim);font-size:14px;margin:0;}
+
+  /* SIMULATION PANEL */
+  .sim-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px 30px;}
+  .sim-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-bottom:28px;}
+  .sim-control label{display:block;font-family:var(--mono);font-size:13px;color:var(--text-dim);margin-bottom:10px;}
+  .sim-control label span{color:var(--amber);font-weight:500;}
+  .sim-control input[type=range]{
+    width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;
+    background:var(--border-strong);outline:none;
+  }
+  .sim-control input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--teal);cursor:pointer;
+    box-shadow:0 0 0 3px rgba(69,217,198,.18);
+  }
+  .sim-control input[type=range]::-moz-range-thumb{
+    width:16px;height:16px;border-radius:50%;background:var(--teal);cursor:pointer;border:none;
+  }
+  .sim-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;padding-top:22px;border-top:1px solid var(--border);}
+  .sim-stat-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint);margin-bottom:6px;}
+  .sim-stat-value{font-family:var(--display);font-size:26px;font-weight:600;}
+  .sim-stat-value.warn{color:var(--amber);}
+  .sim-stat-value.ok{color:var(--teal);}
+
+  /* EDUCATION / FOOTER */
+  footer{padding:56px 0 80px;}
+  .edu-item{margin-bottom:14px;}
+  .edu-degree{font-weight:500;color:var(--text);}
+  .edu-school{color:var(--text-dim);font-size:14px;}
+  .edu-year{font-family:var(--mono);color:var(--text-faint);font-size:12.5px;}
+  .footer-note{margin-top:48px;color:var(--text-faint);font-size:13px;font-family:var(--mono);}
+
+  @media (max-width:600px){
+    .wrap{padding:0 20px;}
+    .hero{padding:64px 0 40px;}
+    section{padding:48px 0;}
+    .contact-row span{padding:0 10px;}
+  }
+
+  /* NAV */
+  .site-nav{
+    position:sticky;top:0;z-index:10;background:rgba(18,22,28,.88);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--border);
+  }
+  .site-nav-inner{
+    max-width:1040px;margin:0 auto;padding:0 32px;height:56px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .site-brand{font-family:var(--display);font-weight:600;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:-.01em;}
+  .site-brand span{color:var(--amber);}
+  .site-links{display:flex;gap:26px;}
+  .site-links a{
+    font-family:var(--mono);font-size:12.5px;color:var(--text-dim);text-decoration:none;letter-spacing:.03em;
+  }
+  .site-links a:hover{color:var(--teal);}
+  @media (max-width:600px){
+    .site-links{gap:16px;}
+    .site-nav-inner{padding:0 20px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="#" class="site-brand">theminilatha<span>.</span></a>
+    <div class="site-links">
+      <a href="#career">Career</a>
+      <a href="#projects">Projects</a>
+      <a href="#insights">Insights</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap hero">
+  <div class="eyebrow"><span class="dot"></span>available for architecture &amp; engineering leadership roles</div>
+  <h1>Ponnilatha Ponnaiah Thangaraja</h1>
+  <p class="role">Principal Software Architect</p>
+  <p class="thesis">16+ years building distributed systems, event-driven pipelines, and secure microservice platforms for financial services and global logistics — from hands-on Java services at Equifax to architecting cloud-native, authenticated microservice systems at scale, with a growing line of independent AI-native projects.</p>
+  <div class="contact-row">
+    <span>Apex, North Carolina, USA</span>
+    <span><a href="mailto:ponnilatha@gmail.com">ponnilatha@gmail.com</a></span>
+    <span>972-951-8153</span>
+    <span><a href="https://linkedin.com/in/ponnilatha" target="_blank" rel="noopener">linkedin.com/in/ponnilatha</a></span>
+    <span><a href="https://www.theminilatha.com/" target="_blank" rel="noopener">theminilatha.com</a></span>
+  </div>
+  <div class="status-console">
+    <span><b>16+ yrs</b> production systems</span>
+    <span><b>6</b> roles across 5 companies</span>
+    <span><b>2</b> independent AI pipelines shipped</span>
+    <span><b>35–50%</b> typical throughput / cycle-time gains</span>
+  </div>
+</div>
+
+<section class="wrap" id="career">
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">Career pipeline</h2>
+    <span class="sec-sub">click a node</span>
+  </div>
+
+  <div class="pipeline-track">
+    <div class="pipeline-line"></div>
+    <div class="nodes" id="nodes"></div>
+  </div>
+
+  <div class="detail-panel" id="detailPanel"></div>
+</section>
+
+<section class="wrap" id="competencies">
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">Core competencies</h2>
+  </div>
+  <div class="chip-grid">
+    <span class="chip">Distributed systems &amp; cloud-native architecture</span>
+    <span class="chip">Microservices auth: API Gateway, BFF, service mesh/mTLS, RBAC/ABAC</span>
+    <span class="chip">Legacy modernization &amp; system decomposition</span>
+    <span class="chip">Event-driven platforms — Kafka, Redis, Kubernetes</span>
+    <span class="chip">SOA — Axis2 web services, Java</span>
+    <span class="chip">Search &amp; ranking systems</span>
+    <span class="chip">Rate management &amp; auditing pipelines</span>
+    <span class="chip">AI-native multi-agent pipelines</span>
+    <span class="chip">CI/CD, DevSecOps &amp; reliability engineering</span>
+    <span class="chip">Architecture governance &amp; engineering leadership</span>
+  </div>
+</section>
+
+<section class="wrap" id="projects">
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">Featured personal projects</h2>
+  </div>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="project-tag">Independent — decision intelligence</div>
+      <h3 class="project-name">FlightIQ</h3>
+      <p class="project-desc">An AI-powered flight congestion intelligence dashboard that optimizes for outcome, not just price. Surfaces FAA ground-stop programs, airport congestion scores, and 7-day forecasts, then ranks departure windows using graph optimization across cost, time, and congestion. Falls back gracefully to BTS statistical models when live data is unavailable.</p>
+      <div class="project-stack">
+        <span class="stack-pill">NetworkX</span>
+        <span class="stack-pill">multi-strategy routing</span>
+        <span class="stack-pill">FAA / BTS data</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Independent — AI-native pipeline</div>
+      <h3 class="project-name">Rate Ingestion</h3>
+      <p class="project-desc">An 8-agent AI-native pipeline that extracts structured rate data from PDFs, scanned images, Excel files, and HTML tables. Built for full auditability back to source, cost-aware LLM routing, and deterministic, reproducible output.</p>
+      <div class="project-stack">
+        <span class="stack-pill">multi-agent orchestration</span>
+        <span class="stack-pill">LLM extraction</span>
+        <span class="stack-pill">cost-aware inference</span>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Independent — simulation &amp; ops research</div>
+      <h3 class="project-name">Truck &amp; Dock Optimization</h3>
+      <p class="project-desc">A simulation engine modeling how trucks arrive, queue, and get assigned to docks across a working day — realistic arrival distributions, service-time variability, and constraints like equipment type, dock capability, and priority loads. Used to test real-time dock-assignment strategies and see how small logic changes move congestion and idle time. Heading toward a lightweight planning tool for yard/dock managers: live truck-to-dock recommendations, early bottleneck detection, and "what-if" scenario testing without touching live operations.</p>
+      <div class="project-stack">
+        <span class="stack-pill">discrete-event simulation</span>
+        <span class="stack-pill">queueing &amp; assignment heuristics</span>
+        <span class="stack-pill">AI-assisted scenario generation</span>
+      </div>
+      <a href="#insights" style="margin-top:14px;font-family:var(--mono);font-size:12.5px;color:var(--teal);text-decoration:none;">↓ try the live queueing model</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="insights">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">Project insights — truck &amp; dock simulation</h2>
+    <span class="sec-sub">live model</span>
+  </div>
+  <p class="thesis" style="margin-bottom:28px;">A simplified version of the underlying queueing mechanics: trucks arrive at random (Poisson process), each dock serves one truck at a time with variable service duration, and a truck waits for the next free dock. Adjust the inputs to see how throughput, wait time, and dock utilization respond — this is the same dynamic the full simulation explores at much higher fidelity.</p>
+
+  <div class="sim-panel">
+    <div class="sim-controls">
+      <div class="sim-control">
+        <label for="arrivalRate">Truck arrivals <span id="arrivalRateVal">30</span>/hr</label>
+        <input type="range" id="arrivalRate" min="5" max="80" value="30" step="1">
+      </div>
+      <div class="sim-control">
+        <label for="numDocks">Docks available <span id="numDocksVal">6</span></label>
+        <input type="range" id="numDocks" min="1" max="12" value="6" step="1">
+      </div>
+      <div class="sim-control">
+        <label for="serviceTime">Avg service time <span id="serviceTimeVal">10</span> min</label>
+        <input type="range" id="serviceTime" min="5" max="60" value="10" step="1">
+      </div>
+    </div>
+    <div class="sim-stats" id="simStats"></div>
+  </div>
+</section>
+
+<section class="wrap" id="tech">
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">Technology expertise</h2>
+  </div>
+  <div class="tech-grid">
+    <div>
+      <p class="tech-cat">Languages</p>
+      <p class="tech-list">Go, .NET 8, Java, Python</p>
+    </div>
+    <div>
+      <p class="tech-cat">Cloud &amp; platforms</p>
+      <p class="tech-list">Kubernetes, Docker, Kafka, Redis, BigQuery, PostgreSQL</p>
+    </div>
+    <div>
+      <p class="tech-cat">AI &amp; automation</p>
+      <p class="tech-list">GitHub Copilot, LangChain, retrieval-based systems, model-context servers, multi-agent pipelines</p>
+    </div>
+    <div>
+      <p class="tech-cat">Security &amp; identity</p>
+      <p class="tech-list">SSO, OAuth2/OIDC, API Gateway, Backend-for-Frontend (BFF), service mesh/mTLS, token introspection, RBAC/ABAC</p>
+    </div>
+    <div>
+      <p class="tech-cat">Legacy enterprise</p>
+      <p class="tech-list">Java SOA, Axis2 web services, Hybris</p>
+    </div>
+    <div>
+      <p class="tech-cat">DevOps</p>
+      <p class="tech-list">GitHub Actions, Jenkins, Ansible, Azure DevOps</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap" id="contact">
+  <div class="sec-head" style="margin-bottom:24px;">
+    <span class="sec-num">06</span>
+    <h2 class="sec-title">Education</h2>
+  </div>
+  <div class="edu-item">
+    <div class="edu-degree">Master of Science — Data Analytics <span class="edu-year">(in progress, 2025 – present)</span></div>
+    <div class="edu-school">Georgia Institute of Technology, USA</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-degree">Master of Science — Software Systems</div>
+    <div class="edu-school">BITS Pilani, India</div>
+  </div>
+  <div class="edu-item">
+    <div class="edu-degree">Bachelor of Engineering — Computer Science</div>
+    <div class="edu-school">Anna University, India</div>
+  </div>
+  <div class="footer-note">ponnilatha@gmail.com · 972-951-8153 · linkedin.com/in/ponnilatha · theminilatha.com</div>
+</footer>
+
+<script>
+  const roles = [
+    {
+      years: "2008–12", label: "Software Engineer", org: "Infosys — Equifax", active:false,
+      title: "Software Engineer", orgFull: "Infosys · Equifax Applications · Apr 2008 – Jan 2012",
+      items: [
+        "Developed a Voice Recorder Unit for an Equifax project using Axis2 web services, owning coding, regression testing, and load testing of the application.",
+        "Delivered small-to-medium enhancements to the credit rating application, including integrations with external payment providers and business logic for identity-theft detection features.",
+        "Contributed to Equifax's mobile applications, developing backend logic that powered the mobile app's core functionality.",
+        "Built service-oriented components as part of enterprise Java applications for a global financial-services client."
+      ]
+    },
+    {
+      years: "2012–13", label: "Program Analyst", org: "IGATE Patni — GE Electricals",
+      title: "Program Analyst", orgFull: "IGATE Patni · GE Electricals, Hybris E-Commerce Platform · Jan 2012 – Aug 2013",
+      items: [
+        "Built and enhanced GE Electricals' e-commerce applications on the Hybris platform, delivering new product features and functional enhancements.",
+        "Worked across the platform's product catalog and storefront capabilities to support evolving business requirements."
+      ]
+    },
+    {
+      years: "2015–16", label: "Sr. Software Developer", org: "Infosys — Equifax B2C",
+      title: "Senior Software Developer", orgFull: "Infosys · Equifax B2C Applications, Production Support · Apr 2015 – Mar 2016",
+      items: [
+        "Owned production support for Equifax B2C applications, triaging incidents, developing bug fixes, and delivering hotfixes to maintain application uptime and SLA compliance.",
+        "Diagnosed and resolved defects across enterprise Java applications for regulated financial-services workloads."
+      ]
+    },
+    {
+      years: "2016–18", label: "Sr. Software Engineer", org: "CargoSphere",
+      title: "Senior Software Engineer", orgFull: "CargoSphere — Planet Trader Inc. · Ocean Freight Rate Management Platform · Apr 2016 – Dec 2018",
+      items: [
+        "Designed and developed the core search engine for an ocean cargo rate platform used by freight forwarders — indexing, query relevance, and result ranking across large freight-rate datasets.",
+        "Built a proof-of-concept for ledgering rate management actions, establishing a traceable, append-only record of rate changes for downstream audit use cases.",
+        "Delivered Phase 1 of a rate-auditing capability with a feedback loop, feeding detected rate discrepancies back into the correction workflow.",
+        "Built a range of event-driven features, from autocomplete powered by most-searched-term suggestions to automated report generation triggered by rate or contract events."
+      ]
+    },
+    {
+      years: "2019–20", label: "Sr. Software Engineer / Tech Lead", org: "WiseTech Global",
+      title: "Senior Software Engineer / Technical Team Lead", orgFull: "WiseTech Global Inc. · Jan 2019 – Jul 2020",
+      items: [
+        "Architected backend services and modern web applications supporting logistics and communication workflows."
+      ]
+    },
+    {
+      years: "2020–now", label: "Principal Software Architect", org: "WiseTech Global", active:true,
+      title: "Principal Software Architect (Team Leader / Engineering Manager)", orgFull: "WiseTech Global · Global Logistics Software Company · Aug 2020 – Present",
+      items: [
+        "Designed cloud-native microservices following microservices design patterns for global logistics workflows, using Go, .NET 8, Python, Kafka, Redis, and Kubernetes.",
+        "Built and maintained various SSO applications; led authentication and authorization for users across microservice applications using the API Gateway pattern for centralized token validation, a Backend-for-Frontend (BFF) layer for login/session handling and token issuance, and a sidecar/service-mesh model (mTLS) for service-to-service auth — enforced with a shared token-introspection/validation service and RBAC/ABAC claims-based authorization at each service.",
+        "Designed a high-volume, event-driven processing pipeline improving peak-window throughput 30–50% for global logistics communications.",
+        "Reverse-engineered monolithic systems into maintainable, cloud-native microservices, with migration playbooks covering data mapping, testing, deployment, and BAU handover.",
+        "Improved deployment speed by 40% through CI/CD automation using GitHub Actions, Jenkins, Ansible, and Azure DevOps.",
+        "Led architecture reviews and platform modernization strategy; mentored engineers and partnered with product, QA, and compliance stakeholders."
+      ]
+    }
+  ];
+
+  const nodesEl = document.getElementById('nodes');
+  const panel = document.getElementById('detailPanel');
+
+  function renderDetail(i){
+    const r = roles[i];
+    panel.innerHTML =
+      '<p class="detail-title">' + r.title + '</p>' +
+      '<p class="detail-org">' + r.orgFull + '</p>' +
+      '<ul>' + r.items.map(t => '<li>' + t + '</li>').join('') + '</ul>';
+  }
+
+  function setActive(i){
+    [...nodesEl.children].forEach((n, idx) => n.classList.toggle('active', idx === i));
+    renderDetail(i);
+  }
+
+  roles.forEach((r, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'node' + (r.active ? ' active' : '');
+    btn.setAttribute('aria-label', r.title + ' at ' + r.org);
+    btn.innerHTML = '<div class="node-dot"></div><div class="node-label">' + r.org + '<span class="node-years">' + r.years + '</span></div>';
+    btn.addEventListener('click', () => setActive(i));
+    nodesEl.appendChild(btn);
+  });
+
+  const initialIndex = roles.findIndex(r => r.active);
+  setActive(initialIndex >= 0 ? initialIndex : roles.length - 1);
+
+  /* --- Truck & dock queueing simulation --- */
+  const arrivalEl = document.getElementById('arrivalRate');
+  const docksEl = document.getElementById('numDocks');
+  const serviceEl = document.getElementById('serviceTime');
+  const arrivalValEl = document.getElementById('arrivalRateVal');
+  const docksValEl = document.getElementById('numDocksVal');
+  const serviceValEl = document.getElementById('serviceTimeVal');
+  const statsEl = document.getElementById('simStats');
+
+  function expRand(mean){
+    return -mean * Math.log(1 - Math.random());
+  }
+
+  function runSimulation(arrivalsPerHour, numDocks, avgServiceMin){
+    const NUM_TRUCKS = 400;
+    const meanInterarrival = 60 / arrivalsPerHour;
+    let dockFree = new Array(numDocks).fill(0);
+    let time = 0;
+    let totalWait = 0;
+    let maxQueue = 0;
+    let totalService = 0;
+    let queueCount = 0;
+
+    for (let i = 0; i < NUM_TRUCKS; i++){
+      time += expRand(meanInterarrival);
+      const earliestDockIdx = dockFree.indexOf(Math.min(...dockFree));
+      const start = Math.max(time, dockFree[earliestDockIdx]);
+      const wait = start - time;
+      const service = expRand(avgServiceMin);
+      dockFree[earliestDockIdx] = start + service;
+      totalWait += wait;
+      totalService += service;
+      if (wait > 0.5) queueCount++;
+      const waitingNow = dockFree.filter(f => f > time).length;
+      if (waitingNow > maxQueue) maxQueue = waitingNow;
+    }
+
+    const totalSimTime = Math.max(...dockFree);
+    const utilization = (totalService / (numDocks * totalSimTime)) * 100;
+    const avgWait = totalWait / NUM_TRUCKS;
+    const pctQueued = (queueCount / NUM_TRUCKS) * 100;
+
+    return { avgWait, utilization, pctQueued, maxQueue };
+  }
+
+  function renderStats(){
+    const arrivals = parseInt(arrivalEl.value, 10);
+    const docks = parseInt(docksEl.value, 10);
+    const service = parseInt(serviceEl.value, 10);
+    arrivalValEl.textContent = arrivals;
+    docksValEl.textContent = docks;
+    serviceValEl.textContent = service;
+
+    const r = runSimulation(arrivals, docks, service);
+    const waitClass = r.avgWait > 10 ? 'warn' : 'ok';
+    const utilClass = r.utilization > 90 ? 'warn' : 'ok';
+
+    statsEl.innerHTML =
+      '<div><div class="sim-stat-label">Avg wait for a dock</div><div class="sim-stat-value ' + waitClass + '">' + r.avgWait.toFixed(1) + ' min</div></div>' +
+      '<div><div class="sim-stat-label">Dock utilization</div><div class="sim-stat-value ' + utilClass + '">' + r.utilization.toFixed(0) + '%</div></div>' +
+      '<div><div class="sim-stat-label">Trucks that queued</div><div class="sim-stat-value">' + r.pctQueued.toFixed(0) + '%</div></div>' +
+      '<div><div class="sim-stat-label">Peak trucks waiting</div><div class="sim-stat-value">' + r.maxQueue + '</div></div>';
+  }
+
+  [arrivalEl, docksEl, serviceEl].forEach(el => el.addEventListener('input', renderStats));
+  renderStats();
+</script>
+
+</body>
+</html>
