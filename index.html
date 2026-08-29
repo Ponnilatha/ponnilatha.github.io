@@ -154,6 +154,7 @@
   .case-link:hover{text-decoration:underline;}
 
   /* TESTIMONIAL */
+  .testimonial-grid{display:flex;flex-direction:column;gap:22px;}
   .testimonial-card{
     background:var(--surface);border:1px solid var(--border);border-radius:12px;
     padding:36px 38px;position:relative;
@@ -259,7 +260,7 @@
     <div class="site-links">
       <a href="#career">Career</a>
       <a href="#projects">Projects</a>
-      <a href="#testimonial">Testimonial</a>
+      <a href="#testimonial">Testimonials</a>
       <a href="#insights">Insights</a>
       <a href="resume.html">Résumé</a>
       <a href="#contact">Contact</a>
@@ -366,26 +367,54 @@
 <section class="wrap" id="testimonial">
   <div class="sec-head">
     <span class="sec-num">04</span>
-    <h2 class="sec-title">Testimonial</h2>
+    <h2 class="sec-title">Testimonials</h2>
   </div>
 
-  <div class="testimonial-card">
-    <p class="testimonial-quote">"Latha is the kind of engineer that every product owner hopes for: insightful, proactive, pragmatic, and deeply invested in building the right solution within the ever-present time constraints. She was a trusted thought partner whose perspective made our product and our team stronger."</p>
-    <div class="testimonial-attr">
-      <div class="testimonial-avatar">MB</div>
-      <div>
-        <div class="testimonial-name">Meghan Barni</div>
-        <div class="testimonial-role">Former Product Manager, CargoSphere (dba WiseTech Global)</div>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"Latha is the kind of engineer that every product owner hopes for: insightful, proactive, pragmatic, and deeply invested in building the right solution within the ever-present time constraints. She was a trusted thought partner whose perspective made our product and our team stronger."</p>
+      <div class="testimonial-attr">
+        <div class="testimonial-avatar">MB</div>
+        <div>
+          <div class="testimonial-name">Meghan Barni</div>
+          <div class="testimonial-role">Former Product Manager, CargoSphere (dba WiseTech Global)</div>
+        </div>
+      </div>
+      <span class="testimonial-toggle" onclick="document.getElementById('fullLetter1').classList.toggle('open'); this.textContent = document.getElementById('fullLetter1').classList.contains('open') ? '↑ Hide full letter' : '↓ Read full letter'">↓ Read full letter</span>
+      <div class="testimonial-full" id="fullLetter1">
+        <p>I am delighted to write this letter of reference for Ponnilatha Thangaraja (Latha). I had the privilege of working closely with Latha for about 6 years while I was a Product Manager at CargoSphere dba WiseTech Global. During that time I was consistently impressed by her technical expertise, leadership, and professionalism.</p>
+        <p>Latha is an incredibly talented software engineer. She has an impressive ability to combine deep technical knowledge with sound judgement and strong leadership skills. She delivers comprehensive, high-quality solutions to complex problems while keeping the end user and the broader business objectives in mind. She is someone I trusted completely to tackle our most difficult problems.</p>
+        <p>Beyond her technical abilities, Latha is an outstanding team leader. People naturally look to her for guidance, not just because of her title, but because of her expertise, kindness, dependability, and willingness to mentor. She directs her team with respect and confidence and keeps them focused on the right things at the right times to deliver results.</p>
+        <p>As a Product Manager, I valued our partnership tremendously. Latha is the kind of engineer that every product owner hopes for: insightful, proactive, pragmatic, and deeply invested in building the right solution within the ever-present time constraints. She was a trusted thought partner whose perspective made our product and our team stronger.</p>
+        <p>I would enthusiastically welcome an opportunity to work with Latha again and recommend her without hesitation. Any organization would be fortunate to have her, and I am confident she will make a meaningful impact wherever she goes next.</p>
+        <p>— Meghan Barni, Former Product Manager, CargoSphere</p>
       </div>
     </div>
-    <span class="testimonial-toggle" onclick="document.getElementById('fullLetter').classList.toggle('open'); this.textContent = document.getElementById('fullLetter').classList.contains('open') ? '↑ Hide full letter' : '↓ Read full letter'">↓ Read full letter</span>
-    <div class="testimonial-full" id="fullLetter">
-      <p>I am delighted to write this letter of reference for Ponnilatha Thangaraja (Latha). I had the privilege of working closely with Latha for about 6 years while I was a Product Manager at CargoSphere dba WiseTech Global. During that time I was consistently impressed by her technical expertise, leadership, and professionalism.</p>
-      <p>Latha is an incredibly talented software engineer. She has an impressive ability to combine deep technical knowledge with sound judgement and strong leadership skills. She delivers comprehensive, high-quality solutions to complex problems while keeping the end user and the broader business objectives in mind. She is someone I trusted completely to tackle our most difficult problems.</p>
-      <p>Beyond her technical abilities, Latha is an outstanding team leader. People naturally look to her for guidance, not just because of her title, but because of her expertise, kindness, dependability, and willingness to mentor. She directs her team with respect and confidence and keeps them focused on the right things at the right times to deliver results.</p>
-      <p>As a Product Manager, I valued our partnership tremendously. Latha is the kind of engineer that every product owner hopes for: insightful, proactive, pragmatic, and deeply invested in building the right solution within the ever-present time constraints. She was a trusted thought partner whose perspective made our product and our team stronger.</p>
-      <p>I would enthusiastically welcome an opportunity to work with Latha again and recommend her without hesitation. Any organization would be fortunate to have her, and I am confident she will make a meaningful impact wherever she goes next.</p>
-      <p>— Meghan Barni, Former Product Manager, CargoSphere</p>
+
+    <div class="testimonial-card">
+      <p class="testimonial-quote">"In short, Latha is a risk-free hire and an outstanding candidate for any organization fortunate enough to work with her. I recommend her enthusiastically and without reservation."</p>
+      <div class="testimonial-attr">
+        <div class="testimonial-avatar">NB</div>
+        <div>
+          <div class="testimonial-name">Neil A. Barni</div>
+          <div class="testimonial-role">Former President &amp; Founder, CargoSphere</div>
+        </div>
+      </div>
+      <span class="testimonial-toggle" onclick="document.getElementById('fullLetter2').classList.toggle('open'); this.textContent = document.getElementById('fullLetter2').classList.contains('open') ? '↑ Hide full letter' : '↓ Read full letter'">↓ Read full letter</span>
+      <div class="testimonial-full" id="fullLetter2">
+        <p>It is with great pleasure that I write this letter of recommendation for Ponnilatha "Latha" Thangaraja. I endorse her in the strongest possible terms and would hire her again without hesitation if I were starting another technology company.</p>
+        <p>I am the former President of CargoSphere, a software company I founded in 1999, later sold to WiseTech Global, and departed in 2022. During my tenure, CargoSphere grew into a global supply chain technology company with nearly 80 employees and a worldwide clientele that included freight forwarders, logistics managers, and other transportation professionals.</p>
+        <p>Latha joined CargoSphere in 2016 and showed immediate promise. From the outset, she distinguished herself as hardworking, intelligent, resourceful, and deeply committed to producing high-quality work under demanding deadlines.</p>
+        <p>CargoSphere operates in a complex and highly specialized market and is an industry-leading solution for ocean freight. We brought to market one of the first and fastest rate search engines in the ocean container shipping industry and are entrusted by many of the world's largest freight forwarders and steamship carriers with highly confidential contract rate data.</p>
+        <p>Within this environment, Latha made meaningful and lasting contributions. She led several important initiatives, including the development of a rate audit process that allowed forwarders to review, approve, or reject frequent carrier rate amendments involving thousands—and sometimes tens of thousands—of individual rates. This gave trade managers an innovative way to analyze, question, and negotiate carrier-issued rate changes with a level of visibility and control that simply did not exist before. She also managed our client quoting and reporting modules, two of the most complex and business-critical components of our system.</p>
+        <p>When Latha joined the company, we were modernizing our code base and moving away from legacy monolithic architecture toward a microservices approach. She rose to that challenge exceptionally well. Among many accomplishments, she rewrote our entire administrative management module, originally built around 2002, using a microservices approach. The result was a major improvement in usability and maintainability and represented a giant step forward for our customers and internal teams.</p>
+        <p>CargoSphere had a strong proof-of-concept culture, and Latha thrived in it. She consistently identified opportunities to improve the product, address customer challenges, and explore new technical approaches. She genuinely enjoys learning, embraces research, and repeatedly returned with thoughtful, practical, and innovative solutions to difficult problems.</p>
+        <p>Because we financed CargoSphere's growth organically through customer revenue rather than institutional investment, every employee had to perform and deliver. Latha did both. She became one of the people I most trusted with difficult assignments, tight timelines, and work that mattered directly to the business.</p>
+        <p>Based on her performance, I appointed Latha to manage a team of developers, where she demonstrated an effective lead-by-example style. She was responsive and supportive of her direct reports while maintaining a clear focus on the broader needs of the team and business. She is also warm, caring, and personable, with a good sense of humor—qualities that made her a valued colleague as well as a strong leader.</p>
+        <p>I understand that Latha is now pursuing a second master's degree in data science, which is entirely consistent with the curiosity, discipline, and drive I saw in her at CargoSphere. She is a capable problem solver with tremendous talent, sound judgment, and a results-driven mindset.</p>
+        <p>In short, Latha is a risk-free hire and an outstanding candidate for any organization fortunate enough to work with her. I recommend her enthusiastically and without reservation.</p>
+        <p>— Neil A. Barni, Former President, CargoSphere</p>
+      </div>
     </div>
   </div>
 </section>
